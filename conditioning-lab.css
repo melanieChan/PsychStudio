@@ -1,0 +1,175 @@
+body {
+  margin: 50px;
+  margin-bottom: 50px;
+}
+
+h1 {
+  color: rgba(255,255,255,.5);
+  font-weight: normal;
+  text-align: center;
+  margin-left: -50px;
+}
+
+.conditioning-lab {
+  background-color: rgba(255,255,255,.25);
+  padding: 10vw;
+
+  margin-bottom: 50px;
+
+} .conditioning-lab:hover {
+  background-color: rgba(255,255,255,.30);
+  margin: -5px;
+
+  margin-bottom: 50px;
+}
+
+#dog {
+  color: #ad9a79;
+}
+
+.bounce  {
+  position:relative;
+  /*left:20%;
+  height:200px;
+  width:50px;*/
+
+  -moz-animation: bounce 0.5s infinite linear;
+  -o-animation: bounce 0.5s infinite linear;
+  animation: bounce 0.5s infinite linear;
+  -webkit-animation:bounce 1s infinite;
+}
+
+@-webkit-keyframes bounce {
+   0%       { bottom:5px; }
+   25%, 75% { bottom:15px; }
+   50%      { bottom:20px; }
+   100%     {bottom:0;}
+ }
+
+/* stimulus for either bell or ball*/
+/* both-stimuli for both bell and ball*/
+ .stimulus, .both-stimuli {
+   color: white;
+ } .stimulus:hover,  .both-stimuli:hover {
+   cursor: pointer;
+   color: var(--highlight);
+ }
+
+ .content-container {
+   padding: 50px;
+   background-color: rgba(255,255,255,.25); /* translucent white*/
+   color: white
+ }
+
+/* rectangle that displays term of icon */
+  .bubble-source {
+    position: relative;
+    display: inline-block;
+  }
+
+  .bubble-source .bubble-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(0,0,0,.25);
+
+    color: #fff;
+    font-size: 14px;
+    font-family: verdana;
+    font-weight: normal;
+    text-align: center;
+
+    border-radius: 6px; /* rounding corners*/
+    padding: 10px;
+
+    position: absolute;
+    z-index: 1;
+    top: 120%;  /* algin vertically */
+
+    /* align text bubble in center with respecto to icon */
+    left: calc( 40% - 60px);
+    /*margin-left: calc( (-60px) + 40%);*/
+    /*margin-left: calc( 35% - 60px);  /* aligns midpoint of icon to midpoint of text bubble*/
+  }
+
+/* arrow */
+.bubble-text::after {
+  content: " ";
+  position: absolute;
+
+  top: -10px; /* position at the top of the text bubble */
+
+  /* align horizontally with respect to body of text bubble*/
+  left: 50%;
+  margin-left: -10px;
+
+  border-width: 5px;
+  border-style: solid;
+
+  border-color: transparent transparent  rgba(0,0,0,.25) transparent;  /* triangle shape */
+}
+
+/* only text bubbles describing stimulus will appear when hovering over stimulus icons
+      when a stimulus is hovered over, the bubble text below it will be visibile */
+.bubble-source:hover.stimulus .bubble-text{
+    visibility: visible;
+  }
+
+/* text bubble under dog icon will only appear if dog is currently jumping
+      when a dog is hovered over & it's also bouncing, its bubble text appears */
+  .bubble-source:hover.bounce .bubble-text {
+    visibility: visible;
+  }
+
+/* icon of both bell and ball is hidden by default */
+.bubble-source.both-stimuli {
+  visibility: hidden;
+}
+
+/* bubble text of icon w/ both bell and ball becomes visible when icon its hovered over */
+.bubble-source:hover.both-stimuli .bubble-text {
+  visibility: visible;
+}
+
+  .stimulus, .both-stimuli {
+    margin: 4vw;
+  }
+
+  .prev-arrow , .next-arrow {
+    background-color: rgba(255,255,255,.55);
+
+
+    padding: 4px;
+
+    font-size: 3vw;
+    border-radius: 50px;
+    color: #29454a;
+
+    padding-left: 10px;
+
+  }   .prev-arrow:hover, .next-arrow:hover {
+      cursor: pointer;
+
+      background-color: var(--highlight);
+      color: white;
+    }
+
+  .prev-arrow {
+    margin-left: -12vw; /* place at the left edge*/
+    margin-right: 5vw; /* space between arrow and first icon */
+
+    display: inline;  /* makes background not larger than the content*/
+
+  }
+
+  .next-arrow {
+    display: inline-block;;  /* makes background not larger than the content*/
+
+  /*  margin-left: 24vw;
+    margin-right: -24vw;*/
+    margin-left: 45%;
+    margin-right: -45%;
+
+    padding-right: 10px;
+
+    align-self: flex-end;
+  }

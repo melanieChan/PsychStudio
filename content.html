@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Learning Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="conditioning-lab.css">  <!-- CSS -->
+
+  </head>
+  <body>
+    <script src = "script.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/7b8820f9b8.js"></script>
+    <script src="https://kit.fontawesome.com/d8adb24f0d.js" crossorigin="anonymous"></script>
+
+    <h1 id="stage-title">Before Conditioning</h1>
+
+    <div class="conditioning-lab" id="lab">
+      <div class="prev-arrow" onclick="handleStageChange(false)">
+        <
+      </div>
+      <i class="fas fa-dog  fa-7x bubble-source" id="dog" >  <!-- dog -->
+        <div class="bubble-text">Unconditioned response</div>
+      </i>
+      <i class="fas fa-baseball-ball fa-3x stimulus bubble-source" onclick="toggleHoldBall(); dogRespondToBall(); "> <!-- ball -->
+        <div class="bubble-text">Unconditioned stimulus</div>
+      </i>
+
+      <i class="fas fa-bell fa-3x stimulus bubble-source" onclick="toggleHoldBell()">  <!-- bell -->
+        <div class="bubble-text">neutral stimulus</div>
+      </i>
+
+      <i class="both-stimuli bubble-source" onclick="holdBothStimuli();">    <!-- both bell and ball -->
+        <i class="fas fa-baseball-ball fa-3x" ></i>
+        <i class="fas fa-bell fa-3x" ></i>
+        <div class="bubble-text">unconditioned & neutral</div>
+      </i>
+
+      <div class="next-arrow" onclick="handleStageChange(true)">
+        >
+      </div>
+
+    </div>
+
+
+    <div class="content-container">
+      Try it out!
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,67 @@
+:root {
+  --highlight: #44b38e;
+  --white: #ffffff;
+}
+
+body {
+  background: linear-gradient(#29454a, #252b36);		
+/*  background-size: 100% 100%; */
+  background-size: cover;
+/*  height: 100%; */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: black;
+
+  justify-content: center;
+
+  font-family: Verdana;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+#collapsedContent {
+  background-color: transparent;
+  border: 0px solid;  /* remove outline */
+}
+
+.panel-collapse {
+  padding : 20px;
+}
+
+.cardId {
+  color: lightgrey;
+
+
+  /*background: #DFE5E1;*/
+  background-color: rgba(255,255,255,.0);
+
+  spacing: 0px;
+  padding : 20px;
+  margin: 50px;
+  margin-left: 50px;
+
+  border-color: lightgrey;
+
+} .cardId:hover {
+
+  /*border-style: solid;*/
+  border-color: white;
+
+  background-color: rgba(255,255,255,.0);
+
+  cursor: pointer;
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover, li:hover {
+  color: white;
+}
+
+iframe {
+  border-radius: 20px;
+
+  width: 80%;
+  height: 315px;
+}
